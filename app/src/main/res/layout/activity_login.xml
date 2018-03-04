@@ -45,7 +45,7 @@
             android:layout_centerHorizontal="true"
             android:layout_marginTop="14dp"
             android:background="@drawable/field_border_and_background"
-            android:hint="@string/hint_senha"
+            android:hint="@string/hint_password"
             android:inputType="textPassword"
             android:padding="10dp"
             android:textColor="@android:color/white"
@@ -65,7 +65,7 @@
             android:paddingLeft="6dp"
             android:paddingRight="6dp"
             android:paddingTop="0dp"
-            android:text="@string/bt_l_cadastrar_conta"
+            android:text="@string/bt_l_create_new_account"
             android:textAllCaps="false"
             android:textColor="@color/colorDarkRedButtonText"
             android:textSize="15sp" />
@@ -81,7 +81,7 @@
             android:layout_alignTop="@+id/bt_sign_up"
             android:background="@drawable/button_green_background"
             android:onClick="callSneakersActivity"
-            android:text="@string/bt_l_entrar"
+            android:text="@string/bt_l_loggin"
             android:textAllCaps="false"
             android:textColor="@android:color/white"
             android:textSize="16sp" />
@@ -99,7 +99,7 @@
             android:paddingLeft="6dp"
             android:paddingRight="6dp"
             android:paddingTop="0dp"
-            android:text="@string/bt_l_esqueci_minha_senha"
+            android:text="@string/bt_l_forgot_password"
             android:textAllCaps="false"
             android:textColor="@color/colorDarkRedButtonText"
             android:textSize="15sp" />
@@ -113,8 +113,9 @@
             android:layout_below="@+id/bt_forgot_password"
             android:layout_marginTop="18dp"
             android:background="@drawable/button_facebook_background"
+            android:onClick="callSneakersActivity"
             android:paddingRight="24dp"
-            android:text="@string/bt_l_entrar_com"
+            android:text="@string/bt_l_loggin_with"
             android:textAllCaps="false"
             android:textColor="@android:color/white"
             android:textSize="16sp" />
@@ -131,8 +132,9 @@
             android:layout_toEndOf="@+id/bt_login_facebook"
             android:layout_toRightOf="@+id/bt_login_facebook"
             android:background="@drawable/button_twitter_background"
+            android:onClick="callSneakersActivity"
             android:paddingRight="24dp"
-            android:text="@string/bt_l_entrar_com"
+            android:text="@string/bt_l_loggin_with"
             android:textAllCaps="false"
             android:textColor="@android:color/white"
             android:textSize="16sp" />
@@ -153,7 +155,7 @@
             android:paddingLeft="6dp"
             android:paddingRight="6dp"
             android:paddingTop="0dp"
-            android:text="@string/bt_l_politicas_de_privacidade"
+            android:text="@string/bt_l_privacy_policy"
             android:textAllCaps="false"
             android:textColor="@color/colorDarkRedButtonText"
             android:textSize="15sp" />

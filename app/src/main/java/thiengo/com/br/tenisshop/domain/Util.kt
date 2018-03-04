@@ -7,11 +7,16 @@ import android.graphics.drawable.GradientDrawable
 import android.view.View
 import android.widget.ImageView
 import thiengo.com.br.tenisshop.R
-import kotlin.math.ceil
 
 
 class Util {
     companion object {
+
+        /*
+         * Defini a cor de background do ImageView, que na verdade será
+         * útil para que a border com radius não tenha contraste com as
+         * cores laterais da imagem.
+         * */
         fun setImageViewBgColor(context: Context, imageView: ImageView) {
             val bitmap = (imageView.getDrawable() as BitmapDrawable).bitmap
             /*
@@ -35,6 +40,10 @@ class Util {
             return Math.round(px)
         }
 
+        /*
+         * Apresenta ou esconde os ImageViews de gênero de acordo com o perfil
+         * do tênis em teste.
+         * */
         fun setGenre(sneaker: Sneaker, male: ImageView, female: ImageView){
             male.visibility =
                 if( sneaker.isForMale )
@@ -49,14 +58,17 @@ class Util {
                     View.GONE
         }
 
+        /*
+         * Coloca estrela cheia ou vazia no ImageView de rating de tênis.
+         * */
         fun setStar(parent: View, starResourceId: Int, position: Int, rating: Int){
             val ivStar = parent.findViewById(starResourceId) as ImageView
 
             ivStar.setImageResource(
-                    if( position <= rating )
-                        R.drawable.ic_star_black_18dp
-                    else
-                        R.drawable.ic_star_border_white_18dp
+                if( position <= rating )
+                    R.drawable.ic_star_black_18dp
+                else
+                    R.drawable.ic_star_border_white_18dp
             )
         }
     }

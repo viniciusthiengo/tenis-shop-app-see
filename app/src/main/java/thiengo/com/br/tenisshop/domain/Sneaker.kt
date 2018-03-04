@@ -14,10 +14,19 @@ class Sneaker(
         val isForFemale: Boolean,
         val rating: Rating,
         val price: Double) : Parcelable {
+
+    /*
+     * Método responsável por retornar o valor do tênis
+     * em um formato humano, brasileiro.
+     * */
     fun getPriceAsString(): String {
         return String.format(Locale.FRANCE, "R$ %.2f", price)
     }
 
+    /*
+     * Método responsável por retornar o valor do tênis,
+     * em parcelas de 10x, em um formato humano, brasileiro.
+     * */
     fun getPriceParcelsAsString(): String {
         val value = price / 10
         return String.format(Locale.FRANCE, "10x R$ %.2f", value)

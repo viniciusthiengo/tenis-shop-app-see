@@ -3,26 +3,23 @@ package thiengo.com.br.tenisshop
 import android.content.Intent
 import android.os.Bundle
 import android.support.design.widget.Snackbar
+import android.support.v7.app.AlertDialog
 import android.support.v7.app.AppCompatActivity
 import android.view.Gravity
 import android.view.Menu
 import android.view.View
-
+import android.widget.AdapterView
+import android.widget.Button
+import android.widget.TextView
 import kotlinx.android.synthetic.main.activity_sneaker_details.*
 import kotlinx.android.synthetic.main.content_sneaker_details.*
-import thiengo.com.br.tenisshop.domain.Brand
-import thiengo.com.br.tenisshop.domain.Rating
 import thiengo.com.br.tenisshop.domain.Sneaker
 import thiengo.com.br.tenisshop.domain.Util
-import android.R.string.cancel
-import android.content.DialogInterface
-import android.support.v7.app.AlertDialog
-import android.view.LayoutInflater
-import android.widget.*
-import kotlinx.android.synthetic.main.dialog_payment.*
 
 
-class SneakerDetailsActivity : AppCompatActivity(), View.OnClickListener, AdapterView.OnItemSelectedListener {
+class SneakerDetailsActivity : AppCompatActivity(),
+        View.OnClickListener,
+        AdapterView.OnItemSelectedListener {
 
     var model : String? = null
 
@@ -32,23 +29,19 @@ class SneakerDetailsActivity : AppCompatActivity(), View.OnClickListener, Adapte
         setSupportActionBar(toolbar)
 
         fab.setOnClickListener { view ->
-            Snackbar.make(view, "Conteúdo compartilhado", Snackbar.LENGTH_LONG)
-                    .setAction("Compartilhar", null).show()
+            Snackbar
+                .make(view, "Conteúdo compartilhado", Snackbar.LENGTH_LONG)
+                .setAction("Compartilhar", null)
+                .show()
         }
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
+        /*
+         * Foi prefirível utilizar sneaker como uma propriedade local,
+         * pois assim evitaremos a necessidade de sempre ter de verificar
+         * null.
+         * */
         val sneaker = intent.getParcelableExtra<Sneaker>(Sneaker.KEY)
-
-        /*val sneaker = Sneaker(
-                R.drawable.shoes_01_a,
-                intArrayOf(R.drawable.shoes_01_b, R.drawable.shoes_01_c, R.drawable.shoes_01_d),
-                "Fresh Foam Cruz",
-                Brand(R.drawable.ic_new_balance, "New Balance"),
-                true,
-                true,
-                Rating(42, 5),
-                499.90
-        )*/
 
         /* MODELO TÊNIS */
         model = sneaker.model
@@ -79,15 +72,13 @@ class SneakerDetailsActivity : AppCompatActivity(), View.OnClickListener, Adapte
 
         sp_amount.setOnItemSelectedListener(this)
 
-        /* RATING */
+        /* RATING, COLOCANDO AS ESTRELAS CORRETAS */
         tv_rating_amount.text = "(${sneaker.rating.amount})"
         Util.setStar(window.decorView, R.id.iv_rating_star_01, 1, sneaker.rating.stars)
         Util.setStar(window.decorView, R.id.iv_rating_star_02, 2, sneaker.rating.stars)
         Util.setStar(window.decorView, R.id.iv_rating_star_03, 3, sneaker.rating.stars)
         Util.setStar(window.decorView, R.id.iv_rating_star_04, 4, sneaker.rating.stars)
         Util.setStar(window.decorView, R.id.iv_rating_star_05, 5, sneaker.rating.stars)
-
-        //callPaymentDialog()
     }
 
     /*
@@ -99,6 +90,10 @@ class SneakerDetailsActivity : AppCompatActivity(), View.OnClickListener, Adapte
         toolbar.title = model
     }
 
+    /*
+     * Somente para apresentarmos o menu item de "adicionar ao
+     * carrinho"
+     * */
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         val inflater = menuInflater
         inflater.inflate(R.menu.menu_sneaker_details, menu)
@@ -110,34 +105,33 @@ class SneakerDetailsActivity : AppCompatActivity(), View.OnClickListener, Adapte
     }
 
     /*
-     * Hackcode para centralizar item selecionado em Spinner de
+     * Hackcode para centralizar o item selecionado no Spinner de
      * quantidade a comprar de um mesmo modelo de tênis.
      * */
-    override fun onItemSelected(adapterView: AdapterView<*>, view: View, i: Int, l: Long) {
+    override fun onItemSelected(
+        adapterView: AdapterView<*>,
+        view: View,
+        i: Int,
+        l: Long ) {
+
         (adapterView.getChildAt(0) as TextView).gravity = Gravity.CENTER
     }
-    override fun onNothingSelected(p0: AdapterView<*>?) {}
+    override fun onNothingSelected(adapterView: AdapterView<*>?) {}
 
-
+    /*
+     * Abre o dialog de pagamento com cartão de crédito. AlertDialog
+     * está sendo utilizado por já ser suficiente a essa necessidade
+     * do aplicativo, mas um DialogFragment poderia ser utilizado
+     * também.
+     * */
     fun callPaymentDialog() {
         val sneaker = intent.getParcelableExtra<Sneaker>(Sneaker.KEY)
-
-        /*val sneaker = Sneaker(
-                R.drawable.shoes_01_a,
-                intArrayOf(R.drawable.shoes_01_b, R.drawable.shoes_01_c, R.drawable.shoes_01_d),
-                "Fresh Foam Cruz",
-                Brand(R.drawable.ic_new_balance, "New Balance"),
-                true,
-                true,
-                Rating(42, 5),
-                499.90
-        )*/
-
         val builder = AlertDialog.Builder(this)
-        val inflater = getLayoutInflater()
-        val dialogLayout = inflater.inflate(R.layout.dialog_payment, null)
+        val dialogLayout = getLayoutInflater()
+                .inflate( R.layout.dialog_payment,null )
 
         builder.setView(dialogLayout)
+
         dialogLayout
             .findViewById<TextView>(R.id.tv_total_price)
             .text = sneaker.getPriceAsString()

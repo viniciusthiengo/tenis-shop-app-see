@@ -4,14 +4,8 @@ import android.content.Intent
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.view.View
-import android.widget.CompoundButton
-import it.sephiroth.android.library.tooltip.Tooltip
-import it.sephiroth.android.library.tooltip.Tooltip.AnimationBuilder
-import it.sephiroth.android.library.tooltip.Tooltip.ClosePolicy
 import kotlinx.android.synthetic.main.activity_thank_you.*
 import kotlinx.android.synthetic.main.content_thank_you.*
-import thiengo.com.br.tenisshop.domain.Brand
-import thiengo.com.br.tenisshop.domain.Rating
 import thiengo.com.br.tenisshop.domain.Sneaker
 import thiengo.com.br.tenisshop.domain.Util
 import java.util.*
@@ -57,12 +51,16 @@ class ThankYouActivity : AppCompatActivity() {
         for( i in 0..18 ){
             code += random.nextInt(10).toString()
         }
-
         return code
     }
 
     fun backToTenisShop(view: View){
         val it = Intent(this, SneakersActivity::class.java)
+        /*
+         * Certificando de que não haverá nenhuma outra atividade
+         * na pilha de atividades quando o button de volta for
+         * acionado.
+         * */
         it.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
         startActivity(it)
     }

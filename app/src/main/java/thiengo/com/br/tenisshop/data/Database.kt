@@ -1,5 +1,6 @@
 package thiengo.com.br.tenisshop.data
 
+import android.content.Context
 import thiengo.com.br.tenisshop.R
 import thiengo.com.br.tenisshop.domain.Brand
 import thiengo.com.br.tenisshop.domain.Rating
@@ -8,8 +9,13 @@ import thiengo.com.br.tenisshop.domain.Sneaker
 
 class Database {
     companion object {
+
+        /*
+         * Retorna os dados de teste do aplicativo, dados
+         * simulados ou dados mock
+         * */
         fun getSneakers() =
-            arrayListOf<Sneaker>(
+            listOf<Sneaker>(
                 Sneaker(
                     R.drawable.shoes_01_a,
                     intArrayOf(R.drawable.shoes_01_b, R.drawable.shoes_01_c, R.drawable.shoes_01_d),
@@ -71,5 +77,22 @@ class Database {
                     749.99
                 )
             )
+
+        /*
+         * Ambos os métodos abaixo trabalham com o SharedPreferences
+         * para que seja possível simular que o usuário atual está ou
+         * não logado ao aplicativo.
+         * */
+        fun setLoggedUser(context: Context, value: Boolean){
+            context
+                .getSharedPreferences("PREF_DATA", Context.MODE_PRIVATE)
+                .edit().putBoolean("is-logged", value)
+                .apply()
+        }
+        fun isUserLogged(context: Context): Boolean{
+            return context
+                .getSharedPreferences("PREF_DATA", Context.MODE_PRIVATE)
+                .getBoolean("is-logged", false)
+        }
     }
 }

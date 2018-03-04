@@ -2,7 +2,6 @@ package thiengo.com.br.tenisshop.adapter
 
 import android.content.Context
 import android.content.Intent
-import android.graphics.Color
 import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
@@ -12,12 +11,6 @@ import android.widget.TextView
 import thiengo.com.br.tenisshop.R
 import thiengo.com.br.tenisshop.SneakerDetailsActivity
 import thiengo.com.br.tenisshop.domain.Sneaker
-import android.graphics.drawable.GradientDrawable
-import android.support.v7.graphics.Palette
-import android.graphics.Bitmap
-import android.R.attr.y
-import android.R.attr.x
-import android.graphics.drawable.BitmapDrawable
 import thiengo.com.br.tenisshop.domain.Util
 
 
@@ -27,18 +20,20 @@ class SneakersAdapter(
         RecyclerView.Adapter<SneakersAdapter.ViewHolder>() {
 
     override fun onCreateViewHolder(
-            parent: ViewGroup,
-            viewType: Int ) : SneakersAdapter.ViewHolder {
+        parent: ViewGroup,
+        viewType: Int ) : SneakersAdapter.ViewHolder {
 
         val v = LayoutInflater
-                .from(context)
-                .inflate(R.layout.sneaker, parent, false)
-
+            .from(context)
+            .inflate(R.layout.sneaker, parent, false)
         return ViewHolder(v)
     }
 
-    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        holder.setDados(sneakers[position])
+    override fun onBindViewHolder(
+        holder: ViewHolder,
+        position: Int) {
+
+        holder.setData( sneakers[position] )
     }
 
     override fun getItemCount(): Int {
@@ -75,7 +70,7 @@ class SneakersAdapter(
             tvPrice = itemView.findViewById(R.id.tv_price)
         }
 
-        fun setDados(sneaker: Sneaker) {
+        fun setData( sneaker: Sneaker ) {
             setGallery(sneaker)
 
             tvModel.text = sneaker.model
@@ -89,18 +84,28 @@ class SneakersAdapter(
         }
 
         private fun setGallery(sneaker: Sneaker){
+            /* IMAGEM PRINCIPAL DO TÊNIS */
             ivSneaker.setImageResource( sneaker.imageResource )
             ivSneaker.contentDescription = "Tênis ${sneaker.model}"
+
             ivSneakerGallery01.setImageResource( sneaker.album[0] )
             ivSneakerGallery02.setImageResource( sneaker.album[1] )
             ivSneakerGallery03.setImageResource( sneaker.album[2] )
 
+            /*
+             * Atualizando a cor de background das imagens para que
+             * a borda fique sem contraste.
+             * */
             Util.setImageViewBgColor(context, ivSneaker)
             Util.setImageViewBgColor(context, ivSneakerGallery01)
             Util.setImageViewBgColor(context, ivSneakerGallery02)
             Util.setImageViewBgColor(context, ivSneakerGallery03)
         }
 
+        /*
+         * Coloca os resources corretos de estrelas de acordo com os
+         * números das avaliações dos tênis.
+         * */
         private fun setRating(sneaker: Sneaker){
             val tvRatingAmount = itemView.findViewById(R.id.tv_rating_amount) as TextView
             tvRatingAmount.text = "(${sneaker.rating.amount})"
@@ -118,8 +123,8 @@ class SneakersAdapter(
         }
 
         override fun onClick(view: View?) {
-            val intent = Intent(context, SneakerDetailsActivity::class.java)
-            intent.putExtra(Sneaker.KEY, sneakers[adapterPosition])
+            val intent = Intent( context, SneakerDetailsActivity::class.java )
+            intent.putExtra( Sneaker.KEY, sneakers[adapterPosition] )
             context.startActivity(intent)
         }
     }

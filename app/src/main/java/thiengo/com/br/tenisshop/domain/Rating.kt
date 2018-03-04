@@ -4,7 +4,10 @@ import android.os.Parcel
 import android.os.Parcelable
 
 
-class Rating(val amount: Int, val stars: Int) : Parcelable {
+class Rating(
+    val amount: Int,
+    val stars: Int) : Parcelable {
+
     constructor(source: Parcel) : this(
             source.readInt(),
             source.readInt()

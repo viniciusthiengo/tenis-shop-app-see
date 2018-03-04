@@ -3,9 +3,11 @@ package thiengo.com.br.tenisshop.domain
 import android.os.Parcel
 import android.os.Parcelable
 
+
 data class Brand(
-        val imageResource: Int,
-        val name: String) : Parcelable {
+    val imageResource: Int,
+    val name: String) : Parcelable {
+
     constructor(source: Parcel) : this(
             source.readInt(),
             source.readString()

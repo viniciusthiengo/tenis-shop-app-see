@@ -25,6 +25,10 @@ class SneakersActivity : AppCompatActivity() {
         rv_sneakers.adapter = SneakersAdapter(this, Database.getSneakers())
     }
 
+    /*
+     * Somente para apresentarmos os itens de "buscar" e
+     * "carrinho de compras"
+     * */
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         val inflater = menuInflater
         inflater.inflate(R.menu.menu, menu)

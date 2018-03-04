@@ -23,7 +23,7 @@
             android:layout_centerHorizontal="true"
             android:layout_marginTop="30dp"
             android:background="@drawable/image_view_profile"
-            android:contentDescription="@string/desc_imagem_de_perfil"
+            android:contentDescription="@string/desc_profile_image"
             android:scaleType="center" />
 
         <TextView
@@ -34,7 +34,7 @@
             android:layout_centerHorizontal="true"
             android:layout_marginTop="12dp"
             android:fontFamily="@font/chewy_regular"
-            android:text="@string/rotulo_imagem_de_perfil"
+            android:text="@string/label_profile_image"
             android:textColor="@android:color/white"
             android:textSize="24sp" />
 
@@ -45,7 +45,7 @@
             android:layout_below="@+id/tv_profile"
             android:layout_marginTop="40dp"
             android:fontFamily="@font/chewy_regular"
-            android:text="@string/rotulo_endereco"
+            android:text="@string/label_address"
             android:textColor="@android:color/white"
             android:textSize="24sp" />
 
@@ -63,7 +63,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="0.32"
                 android:background="@drawable/field_border_and_background"
-                android:hint="@string/hint_rua"
+                android:hint="@string/hint_street"
                 android:inputType="text"
                 android:padding="10dp"
                 android:textColor="@android:color/white"
@@ -79,7 +79,7 @@
                 android:layout_marginStart="14dp"
                 android:layout_weight="0.20"
                 android:background="@drawable/field_border_and_background"
-                android:hint="@string/hint_numero"
+                android:hint="@string/hint_number"
                 android:inputType="number"
                 android:padding="10dp"
                 android:textColor="@android:color/white"
@@ -91,7 +91,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="0.48"
                 android:background="@drawable/field_border_and_background"
-                android:hint="@string/hint_cep"
+                android:hint="@string/hint_zip_code"
                 android:inputType="textPostalAddress"
                 android:padding="10dp"
                 android:textColor="@android:color/white"
@@ -127,7 +127,7 @@
                 android:layout_marginRight="14dp"
                 android:layout_weight="1"
                 android:background="@drawable/field_border_and_background"
-                android:hint="@string/hint_cidade"
+                android:hint="@string/hint_city"
                 android:inputType="text"
                 android:padding="10dp"
                 android:textColor="@android:color/white"
@@ -275,6 +275,7 @@
             android:layout_marginTop="24dp"
             android:background="@drawable/button_green_background"
             android:enabled="false"
+            android:onClick="callSneakersActivity"
             android:text="@string/bt_l_sign_up"
             android:textAllCaps="false"
             android:textColor="@android:color/white"
