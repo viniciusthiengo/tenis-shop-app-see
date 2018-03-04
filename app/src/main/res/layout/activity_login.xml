@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:context="thiengo.com.br.tenisshop.LoginActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/background_login"
+        android:paddingBottom="8dp">
+
+        <ImageView
+            android:id="@+id/iv_logo"
+            android:layout_width="133dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="130dp"
+            android:contentDescription="@string/desc_logo_app"
+            android:scaleType="fitCenter"
+            android:src="@drawable/logo_app" />
+
+        <EditText
+            android:id="@+id/et_email"
+            android:layout_width="290dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/iv_logo"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/field_border_and_background"
+            android:hint="@string/hint_email"
+            android:inputType="textEmailAddress"
+            android:padding="10dp"
+            android:textColor="@android:color/white"
+            android:textColorHint="@android:color/white" />
+
+        <EditText
+            android:id="@+id/et_password"
+            android:layout_width="290dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/et_email"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="14dp"
+            android:background="@drawable/field_border_and_background"
+            android:hint="@string/hint_senha"
+            android:inputType="textPassword"
+            android:padding="10dp"
+            android:textColor="@android:color/white"
+            android:textColorHint="@android:color/white" />
+
+        <Button
+            android:id="@+id/bt_sign_up"
+            android:layout_width="wrap_content"
+            android:layout_height="24dp"
+            android:layout_alignLeft="@+id/et_password"
+            android:layout_alignStart="@+id/et_password"
+            android:layout_below="@+id/et_password"
+            android:layout_marginTop="18dp"
+            android:background="@drawable/button_dark_background"
+            android:onClick="callSignUpActivity"
+            android:paddingBottom="0dp"
+            android:paddingLeft="6dp"
+            android:paddingRight="6dp"
+            android:paddingTop="0dp"
+            android:text="@string/bt_l_cadastrar_conta"
+            android:textAllCaps="false"
+            android:textColor="@color/colorDarkRedButtonText"
+            android:textSize="15sp" />
+
+        <Button
+            android:id="@+id/bt_login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/et_password"
+            android:layout_alignLeft="@+id/bt_forgot_password"
+            android:layout_alignRight="@+id/et_password"
+            android:layout_alignStart="@+id/bt_forgot_password"
+            android:layout_alignTop="@+id/bt_sign_up"
+            android:background="@drawable/button_green_background"
+            android:onClick="callSneakersActivity"
+            android:text="@string/bt_l_entrar"
+            android:textAllCaps="false"
+            android:textColor="@android:color/white"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/bt_forgot_password"
+            android:layout_width="wrap_content"
+            android:layout_height="24dp"
+            android:layout_alignEnd="@+id/et_password"
+            android:layout_alignRight="@+id/et_password"
+            android:layout_below="@+id/bt_login"
+            android:layout_marginTop="9dp"
+            android:background="@drawable/button_dark_background"
+            android:paddingBottom="0dp"
+            android:paddingLeft="6dp"
+            android:paddingRight="6dp"
+            android:paddingTop="0dp"
+            android:text="@string/bt_l_esqueci_minha_senha"
+            android:textAllCaps="false"
+            android:textColor="@color/colorDarkRedButtonText"
+            android:textSize="15sp" />
+
+        <Button
+            android:id="@+id/bt_login_facebook"
+            android:layout_width="140dp"
+            android:layout_height="48dp"
+            android:layout_alignLeft="@+id/et_password"
+            android:layout_alignStart="@+id/et_password"
+            android:layout_below="@+id/bt_forgot_password"
+            android:layout_marginTop="18dp"
+            android:background="@drawable/button_facebook_background"
+            android:paddingRight="24dp"
+            android:text="@string/bt_l_entrar_com"
+            android:textAllCaps="false"
+            android:textColor="@android:color/white"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/bt_login_twitter"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:layout_alignEnd="@+id/et_password"
+            android:layout_alignRight="@+id/et_password"
+            android:layout_alignTop="@+id/bt_login_facebook"
+            android:layout_marginLeft="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_toEndOf="@+id/bt_login_facebook"
+            android:layout_toRightOf="@+id/bt_login_facebook"
+            android:background="@drawable/button_twitter_background"
+            android:paddingRight="24dp"
+            android:text="@string/bt_l_entrar_com"
+            android:textAllCaps="false"
+            android:textColor="@android:color/white"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/bt_privacy_policy"
+            android:layout_width="wrap_content"
+            android:layout_height="24dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/bt_login_twitter"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/button_dark_background"
+            android:paddingBottom="0dp"
+            android:paddingLeft="6dp"
+            android:paddingRight="6dp"
+            android:paddingTop="0dp"
+            android:text="@string/bt_l_politicas_de_privacidade"
+            android:textAllCaps="false"
+            android:textColor="@color/colorDarkRedButtonText"
+            android:textSize="15sp" />
+    </RelativeLayout>
+</ScrollView>

@@ -1,0 +1,165 @@
+<resources>
+    <string name="app_name">Tênis Shop</string>
+    <string name="desc_logo_app">Logo Tênis Shop App</string>
+    <string name="hint_email">Email</string>
+    <string name="hint_senha">Senha</string>
+    <string name="bt_l_cadastrar_conta">Cadastrar conta</string>
+    <string name="bt_l_entrar">Entrar</string>
+    <string name="bt_l_esqueci_minha_senha">Esqueci minha senha</string>
+    <string name="bt_l_entrar_com">Entrar com</string>
+    <string name="bt_l_politicas_de_privacidade">Políticas de privacidade</string>
+    <string name="title_activity_sign_up">Cadastro cliente</string>
+    <string name="title_activity_thank_you">Voltar para Tênis Shop</string>
+    <string name="desc_imagem_de_perfil">Imagem de perfil</string>
+    <string name="rotulo_imagem_de_perfil">Imagem de perfil</string>
+    <string name="rotulo_endereco">Endereço</string>
+    <string name="hint_rua">Rua</string>
+    <string name="hint_numero">Nº</string>
+    <string name="hint_cep">CEP</string>
+    <string name="hint_complement">Complemento</string>
+    <string name="hint_cidade">Cidade</string>
+    <string name="label_personal_data">Dados pessoais</string>
+    <string name="hint_full_name">Nome completo</string>
+    <string name="hint_ddd">DDD</string>
+    <string name="hint_phone_number">Telefone</string>
+    <string name="desc_help_icon">Ícone de ajuda</string>
+    <string name="help_text">Será utilizado principalmente para promoções especiais por telefone</string>
+    <string name="label_access_data">Dados de acesso</string>
+    <string name="hint_password">Senha</string>
+    <string name="terms_of_use">Concordo com os termos de uso.</string>
+    <string name="bt_l_sign_up">Cadastrar</string>
+    <string name="desc_sneaker_first_gallery_image">Primeira imagem extra da galeria</string>
+    <string name="desc_sneaker_second_gallery_image">Segunda imagem extra da galeria</string>
+    <string name="desc_sneaker_third_gallery_image">Terceira imagem extra da galeria</string>
+    <string name="desc_male_icon">Ícone do sexo masculino</string>
+    <string name="desc_female_icon">Ícone do sexo feminino</string>
+    <string name="label_free">grátis</string>
+    <string name="label_put_on_shop_cart">Colocar no</string>
+
+    <string-array name="states">
+        <item>Estado</item>
+        <item>Acre (AC)</item>
+        <item>Alagoas (AL)</item>
+        <item>30 minutos</item>
+        <item>45 minutos</item>
+        <item>Amapá (AP)</item>
+        <item>Amazonas (AM)</item>
+        <item>Bahia (BA)</item>
+        <item>Ceará (CE)</item>
+        <item>Distrito Federal (DF)</item>
+        <item>Espírito Santo (ES)</item>
+        <item>Goiás (GO)</item>
+        <item>Maranhão (MA)</item>
+        <item>Mato Grosso (MT)</item>
+        <item>Mato Grosso do Sul (MS)</item>
+        <item>Minas Gerais (MG)</item>
+        <item>Pará (PA)</item>
+        <item>Paraíba (PB)</item>
+        <item>Paraná (PR)</item>
+        <item>Pernambuco (PE)</item>
+        <item>Piauí (PI)</item>
+        <item>Rio de Janeiro (RJ)</item>
+        <item>Rio Grande do Norte (RN)</item>
+        <item>Rio Grande do Sul (RS)</item>
+        <item>Rondônia (RO)</item>
+        <item>Roraima (RR)</item>
+        <item>Santa Catarina (SC)</item>
+        <item>São Paulo (SP)</item>
+        <item>Sergipe (SE)</item>
+        <item>Tocantins (TO)</item>
+    </string-array>
+    <string name="title_activity_sneaker_details">SneakerDetailsActivity</string>
+    <string name="brazil_free_delivery">Frete grátis para todo Brasil</string>
+    <string name="desc_truck_delivery">Ícone de caminhão para entrega, frete</string>
+    <string name="label_recommended">Recomendado para:</string>
+    <string name="label_type">Tipo:</string>
+    <string name="label_composition">Composição:</string>
+    <string name="label_access_rating">Acessar avaliações</string>
+    <string name="label_buy">Comprar</string>
+    <string name="label_description">Descrição:</string>
+    <string name="value_stok_invetory">Quantidade (4 estoque)</string>
+    <string name="value_recommended">Running</string>
+    <string name="value_type">Performance</string>
+    <string name="value_composition">68% Poliamida | 32% Sintético</string>
+    <string name="value_desc">O mais novo Fresh Foam Cruz conta com a nossa premiada tecnologia Fresh Foam para uma corrida estável e de alto amortecimento. Seu cabedal sofisticado combina a junção central do tênis com o mesh respirável para oferecer suporte com uma camada extra de conforto. O Fresh Foam Cruz proporciona uma sensação de frescor ao seu pé, treino após treino.</string>
+    <string name="excellent_buy">Excelente compra!</string>
+    <string name="keep_buying">Continuar comprando</string>
+    <string name="dialog_title">Pagamento</string>
+    <string name="desc_credit_cards">Bandeiras de cartão aceitas</string>
+    <string name="dialog_label_card_number">Número do cartão:</string>
+    <string name="dialog_hint_card_number">xxxx xxxx xxxx xxxx</string>
+    <string name="dialog_label_card_cvv">Código de segurança - CVV:</string>
+    <string name="dialog_hint_card_cvv">xxx ou xxxx</string>
+    <string name="dialog_label_card_owner">Nome do proprietário do cartão - como está no cartão:</string>
+    <string name="dialog_label_card_expire">Vencimento cartão</string>
+    <string name="dialog_label_card_expire_month">Mês:</string>
+    <string name="dialog_label_card_expire_bar">/</string>
+    <string name="dialog_label_card_expire_year">Ano:</string>
+    <string name="dialog_label_card_total_parcels"><![CDATA[Número de parcelas. Se > 10x tem adição de juros:]]></string>
+    <string name="label_bt_finish_buy">Finalizar compra</string>
+    <string name="dialog_label_total">Total:</string>
+    <string name="dialog_label_parcels_without_taxes">em até 10x sem juros</string>
+    <string-array name="colors">
+        <item>Preto</item>
+        <item>Vermelho</item>
+        <item>Branco</item>
+        <item>Azul</item>
+        <item>Verde</item>
+    </string-array>
+    <string-array name="sizes">
+        <item>36</item>
+        <item>37</item>
+        <item>38</item>
+        <item>39</item>
+        <item>40</item>
+        <item>41</item>
+        <item>42</item>
+        <item>43</item>
+        <item>44</item>
+    </string-array>
+    <string-array name="amount">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+    </string-array>
+    <string-array name="months">
+        <item>01</item>
+        <item>02</item>
+        <item>03</item>
+        <item>04</item>
+        <item>05</item>
+        <item>06</item>
+        <item>07</item>
+        <item>08</item>
+        <item>09</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+    </string-array>
+    <string-array name="years">
+        <item>2018</item>
+        <item>2019</item>
+        <item>2020</item>
+        <item>2021</item>
+        <item>2022</item>
+        <item>2023</item>
+        <item>2024</item>
+        <item>2025</item>
+        <item>2026</item>
+    </string-array>
+    <string-array name="parcels">
+        <item>1x</item>
+        <item>2x</item>
+        <item>3x</item>
+        <item>4x</item>
+        <item>5x</item>
+        <item>6x</item>
+        <item>7x</item>
+        <item>8x</item>
+        <item>9x</item>
+        <item>10x</item>
+        <item>11x (2% juros)</item>
+        <item>12x (2.5% juros)</item>
+    </string-array>
+</resources>
