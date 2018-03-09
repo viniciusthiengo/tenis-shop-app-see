@@ -4,7 +4,7 @@ import android.os.Parcel
 import android.os.Parcelable
 
 
-data class Brand(
+class Brand(
     val imageResource: Int,
     val name: String) : Parcelable {
 

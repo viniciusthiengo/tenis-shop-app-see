@@ -23,7 +23,6 @@
     <style name="SpinnerTheme" parent="AppTheme">
         <item name="android:textViewStyle">@style/TextViewStyle</item>
     </style>
-
     <style name="TextViewStyle" parent="android:Widget.TextView">
         <item name="android:textColor">@android:color/white</item>
     </style>
@@ -31,7 +30,6 @@
     <style name="SpinnerThemeDark">
         <item name="android:textViewStyle">@style/TextViewStyleDark</item>
     </style>
-
     <style name="TextViewStyleDark" parent="android:Widget.TextView">
         <item name="android:textColor">@color/colorDarkDialog</item>
     </style>

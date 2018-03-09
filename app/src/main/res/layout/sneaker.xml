@@ -3,10 +3,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:layout_marginBottom="7dp"
     android:layout_marginLeft="14dp"
     android:layout_marginRight="14dp"
     android:layout_marginTop="7dp"
-    android:layout_marginBottom="7dp"
     android:background="@drawable/item_border_and_background"
     android:padding="6dp"
     tools:context="thiengo.com.br.tenisshop.SneakersActivity">
@@ -91,9 +91,9 @@
         android:layout_width="wrap_content"
         android:layout_height="14dp"
         android:layout_below="@+id/tv_model"
+        android:layout_marginBottom="4dp"
         android:layout_toEndOf="@id/vv_vertical_line"
         android:layout_toRightOf="@id/vv_vertical_line"
-        android:layout_marginBottom="4dp"
         android:scaleType="fitCenter" />
 
     <ImageView

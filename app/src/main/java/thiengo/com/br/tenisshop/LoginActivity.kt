@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.view.View
+import com.appsee.Appsee
 import thiengo.com.br.tenisshop.data.Database
 
 
@@ -12,6 +13,8 @@ class LoginActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
+
+        Appsee.start("950abe9438e74242a65873bb31a8e2aa");
 
         /*
          * Se o usuário já tiver logado no aplicativo anteriormente,

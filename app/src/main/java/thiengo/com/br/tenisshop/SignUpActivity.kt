@@ -26,6 +26,10 @@ class SignUpActivity : AppCompatActivity(),
         cb_terms_of_use.setOnCheckedChangeListener(this)
     }
 
+    /*
+     * Para a liberação do button de cadastro, somente se os termos
+     * de uso estiverem de acordo, o usuário aceita-los.
+     * */
     override fun onCheckedChanged(checkButton: CompoundButton?, status: Boolean) {
         bt_sign_up.isEnabled = status
     }
