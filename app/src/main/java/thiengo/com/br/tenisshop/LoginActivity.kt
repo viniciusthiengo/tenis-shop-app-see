@@ -14,7 +14,7 @@ class LoginActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
 
-        Appsee.start("950abe9438e74242a65873bb31a8e2aa");
+        Appsee.start("Sua_chave_de_api_fornecida_pela_appsee_no_cadastro_do_app")
 
         /*
          * Se o usuário já tiver logado no aplicativo anteriormente,
