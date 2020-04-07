@@ -1,8 +1,8 @@
 # Tênis Shop (Kotlin Android)
 
-Projeto Kotlin Android da segunda parte do artigo [Trabalhando Análise Qualitativa em seu Aplicativo Android](https://www.thiengo.com.br/trabalhando-analise-qualitativa-em-seu-aplicativo-android#title-16) do Blog [Thiengo.com.br](https://www.thiengo.com.br). Artigo que discute em detalhes a AppSee SDK (Software Development Kit).
+Projeto Kotlin Android da segunda parte do artigo [Trabalhando Análise Qualitativa em seu Aplicativo Android](https://www.thiengo.com.br/trabalhando-analise-qualitativa-em-seu-aplicativo-android#title-16) do Blog [Thiengo.com.br](https://www.thiengo.com.br). Artigo que discute em detalhes o AppSee SDK (*Software Development Kit*).
 
-SDK muito utilizada para análise qualitativa de aplicativos Android.
+SDK muito utilizado para análise qualitativa de aplicativos Android.
 
 <img src="https://www.thiengo.com.br/img/post/normal/3ad1fkumnb6hr7uv1jpa1jo9q15ede0bf65762ed0a6f7e7a802cec1a1b.gif" width="480" alt="Dashboard AppSee">
 
@@ -10,11 +10,11 @@ O conteúdo do artigo também está disponível em [vídeos](https://www.thiengo
 
 ### Primeira parte
 
-Caso você queira ter acesso à primeira parte do artigo, então [entre por aqui](https://www.thiengo.com.br/trabalhando-analise-qualitativa-em-seu-aplicativo-android#title-01). Está primeira parte discute somente a AppSee SDK, sem um projeto Android de exemplo em específico.
+Caso você queira ter acesso à primeira parte do artigo, então [entre por aqui](https://www.thiengo.com.br/trabalhando-analise-qualitativa-em-seu-aplicativo-android#title-01). Está primeira parte discute somente o AppSee SDK, sem um projeto Android de exemplo em específico.
 
 ### AndroidX
 
-Caso você queira ter o projeto de exemplo ainda mais atual, isso em relação às tecnologias Android já liberadas desde a criação desse conteúdo sobre a AppSee SDK.
+Caso você queira ter o projeto de exemplo ainda mais atual, isso em relação às tecnologias Android já liberadas desde a criação desse conteúdo sobre o AppSee SDK.
 
 Caso você queira isso, então será necessário atualiza-lo para o AndroidX. Algo simples de fazer, que exige poucos cliques no Android Studio IDE, exatamente como apresentado em: [Migrar para o AndroidX](https://developer.android.com/jetpack/androidx/migrate?hl=pt-br).
 
