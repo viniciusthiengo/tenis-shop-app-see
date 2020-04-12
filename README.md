@@ -6,7 +6,7 @@ SDK muito utilizado para análise qualitativa de aplicativos Android.
 
 <img src="https://www.thiengo.com.br/img/post/normal/3ad1fkumnb6hr7uv1jpa1jo9q15ede0bf65762ed0a6f7e7a802cec1a1b.gif" width="480" alt="Dashboard AppSee">
 
-O conteúdo do artigo também está disponível em [vídeos](https://www.thiengo.com.br/trabalhando-analise-qualitativa-em-seu-aplicativo-android#title-39) e em [slides](https://www.thiengo.com.br/trabalhando-analise-qualitativa-em-seu-aplicativo-android#title-38).
+O conteúdo do artigo também está disponível em [vídeo](https://www.thiengo.com.br/trabalhando-analise-qualitativa-em-seu-aplicativo-android#title-39) e em [slides](https://www.thiengo.com.br/trabalhando-analise-qualitativa-em-seu-aplicativo-android#title-38).
 
 ### Primeira parte
 
